@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 150 10% 97%;
+    --foreground: 160 20% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 20% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 20% 8%;
+
+    --primary: 153 60% 28%;
+    --primary-foreground: 60 30% 96%;
+
+    --secondary: 150 8% 92%;
+    --secondary-foreground: 160 20% 8%;
+
+    --muted: 150 8% 94%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 43 90% 52%;
+    --accent-foreground: 160 20% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 10% 88%;
+    --input: 150 10% 88%;
+    --ring: 153 60% 28%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 160 20% 8%;
+    --sidebar-foreground: 150 10% 90%;
+    --sidebar-primary: 153 60% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 15% 15%;
+    --sidebar-accent-foreground: 150 10% 90%;
+    --sidebar-border: 160 15% 18%;
+    --sidebar-ring: 153 60% 40%;
+
+    /* Custom tokens */
+    --emerald: 153 60% 28%;
+    --emerald-light: 153 50% 45%;
+    --gold: 43 90% 52%;
+    --gold-light: 43 80% 65%;
+    --pitch: 152 40% 12%;
+    --pitch-light: 152 30% 18%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(152 40% 12%) 0%, hsl(153 60% 20%) 50%, hsl(160 30% 10%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 90% 52%) 0%, hsl(35 85% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(150 10% 97%) 100%);
+
+    --shadow-card: 0 4px 24px -4px hsl(160 20% 8% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(160 20% 8% / 0.15);
+    --shadow-gold: 0 4px 20px -4px hsl(43 90% 52% / 0.3);
+
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 160 20% 6%;
+    --foreground: 150 10% 95%;
+
+    --card: 160 18% 10%;
+    --card-foreground: 150 10% 95%;
+
+    --popover: 160 18% 10%;
+    --popover-foreground: 150 10% 95%;
+
+    --primary: 153 55% 40%;
+    --primary-foreground: 160 20% 6%;
+
+    --secondary: 160 15% 15%;
+    --secondary-foreground: 150 10% 95%;
+
+    --muted: 160 12% 14%;
+    --muted-foreground: 150 8% 55%;
+
+    --accent: 43 85% 55%;
+    --accent-foreground: 160 20% 6%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 12% 16%;
+    --input: 160 12% 16%;
+    --ring: 153 55% 40%;
+
+    --sidebar-background: 160 22% 5%;
+    --sidebar-foreground: 150 10% 90%;
+    --sidebar-primary: 153 55% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 15% 12%;
+    --sidebar-accent-foreground: 150 10% 90%;
+    --sidebar-border: 160 15% 14%;
+    --sidebar-ring: 153 55% 40%;
+
+    --emerald: 153 55% 40%;
+    --emerald-light: 153 45% 55%;
+    --gold: 43 85% 55%;
+    --gold-light: 43 75% 68%;
+    --pitch: 160 25% 8%;
+    --pitch-light: 160 20% 14%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(160 25% 5%) 0%, hsl(153 40% 12%) 50%, hsl(160 20% 4%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 85% 55%) 0%, hsl(35 80% 48%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(160 18% 10%) 0%, hsl(160 20% 8%) 100%);
+
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.4);
+    --shadow-gold: 0 4px 20px -4px hsl(43 85% 55% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-pitch {
+    background: var(--gradient-hero);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
