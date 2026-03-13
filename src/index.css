@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -53,16 +53,29 @@
     --pitch: 152 40% 12%;
     --pitch-light: 152 30% 18%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(152 40% 12%) 0%, hsl(153 60% 20%) 50%, hsl(160 30% 10%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(43 90% 52%) 0%, hsl(35 85% 45%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(150 10% 97%) 100%);
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(152 40% 12%) 0%,
+      hsl(153 60% 20%) 50%,
+      hsl(160 30% 10%) 100%
+    );
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(43 90% 52%) 0%,
+      hsl(35 85% 45%) 100%
+    );
+    --gradient-card: linear-gradient(
+      180deg,
+      hsl(0 0% 100%) 0%,
+      hsl(150 10% 97%) 100%
+    );
 
     --shadow-card: 0 4px 24px -4px hsl(160 20% 8% / 0.08);
     --shadow-elevated: 0 12px 40px -8px hsl(160 20% 8% / 0.15);
     --shadow-gold: 0 4px 20px -4px hsl(43 90% 52% / 0.3);
 
-    --font-display: 'Oswald', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: "Oswald", sans-serif;
+    --font-body: "Inter", sans-serif;
   }
 
   .dark {
@@ -110,9 +123,22 @@
     --pitch: 160 25% 8%;
     --pitch-light: 160 20% 14%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(160 25% 5%) 0%, hsl(153 40% 12%) 50%, hsl(160 20% 4%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(43 85% 55%) 0%, hsl(35 80% 48%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(160 18% 10%) 0%, hsl(160 20% 8%) 100%);
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(160 25% 5%) 0%,
+      hsl(153 40% 12%) 50%,
+      hsl(160 20% 4%) 100%
+    );
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(43 85% 55%) 0%,
+      hsl(35 80% 48%) 100%
+    );
+    --gradient-card: linear-gradient(
+      180deg,
+      hsl(160 18% 10%) 0%,
+      hsl(160 20% 8%) 100%
+    );
 
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
     --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.4);
@@ -130,7 +156,12 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     text-transform: uppercase;
     letter-spacing: 0.02em;
